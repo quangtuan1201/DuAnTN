@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  th:fragment="dynamic(main)">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.webp">
+    
+        <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+    
+        <!-- Font CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Vendor CSS (Bootstrap & Icon Font) -->
+        <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+    
+        <!-- Plugins CSS (All Plugins Files) -->
+        <link rel="stylesheet" th:href="@{/assets/css/plugins/swiper-bundle.min.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/plugins/font-awesome.min.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/plugins/fancybox.min.css}">
+        <link rel="stylesheet" th:href="@{/assets/css/plugins/nice-select.css}">
+    
+        <!-- Style CSS -->
+        <link rel="stylesheet" th:href="@{/assets/css/style.min.css}">
+
+          <!-- Vendors JS -->
+        <script th:src="@{/assets/js/vendor/modernizr-3.11.7.min.js}"></script>
+        <script th:src="@{/assets/js/vendor/jquery-3.6.0.min.js}"></script>
+        <script th:src="@{/assets/js/vendor/jquery-migrate-3.3.2.min.js}"></script>
+        <script th:src="@{/assets/js/vendor/bootstrap.bundle.min.js}"></script>
+    
+        <!-- Plugins JS -->
+        <script th:src="@{/assets/js/plugins/swiper-bundle.min.js}"></script>
+        <script th:src="@{/assets/js/plugins/fancybox.min.js}"></script>
+        <script th:src="@{/assets/js/plugins/jquery.nice-select.min.js}"></script>
+    
+        <!-- Custom Main JS -->
+        <script th:src="@{/assets/js/main.js}"></script>
+    
+    
+    </head>
+<body>
+    <div th:replace="${main}"></div>
+
+     <!-- Vendors JS -->
+     <script th:src="@{/assets/js/vendor/modernizr-3.11.7.min.js}"></script>
+     <script th:src="@{/assets/js/vendor/jquery-3.6.0.min.js}"></script>
+     <script th:src="@{/assets/js/vendor/jquery-migrate-3.3.2.min.js}"></script>
+     <script th:src="@{/assets/js/vendor/bootstrap.bundle.min.js}"></script>
+ 
+     <!-- Plugins JS -->
+     <script th:src="@{/assets/js/plugins/swiper-bundle.min.js}"></script>
+     <script th:src="@{/assets/js/plugins/fancybox.min.js}"></script>
+     <script th:src="@{/assets/js/plugins/jquery.nice-select.min.js}"></script>
+ 
+     <!-- Custom Main JS -->
+     <script th:src="@{/assets/js/main.js}"></script>
+ 
+</body>
+</html>
+
+<!-- <div class="d-flex">
+    <div th:each="image, iterStat : ${entry.value}" class="thumbnail-container">
+        <img th:id="'image' + ${entry.key.maSP} + '_' + ${iterStat.index}" 
+             th:src="@{/assets/images/shop/{image}(image=${image})}" 
+             th:onclick="'changeImage(' + ${entry.key.maSP} + ', ' + ${iterStat.index} + ')' " 
+             class="img-thumbnail" style="cursor:pointer; width: 50px; height: auto; margin-right: 5px;">
+    </div>
+</div> -->
